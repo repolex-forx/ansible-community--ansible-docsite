@@ -1,1 +1,222 @@
-Initializing
+# Repolex Knowledge Graph of ansible-community/ansible-docsite
+
+RDF knowledge graph data for [ansible-community/ansible-docsite](https://github.com/ansible-community/ansible-docsite), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download ansible-community/ansible-docsite
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── cb4337efcac0694231d3bd0976522887343ebab9
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── cb4337efcac0694231d3bd0976522887343ebab9
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 010892dee901c69a02dc9af79d6e5b879b2360c6.nq.gz
+│   ├── 0164155b81025416095f31a4732098ec238e6476.nq.gz
+│   ├── 0559931721b160531e47e41c62c2995fd97d3cb6.nq.gz
+│   ├── 057a826f0680a3e4923a5a70ada322e68a778ea6.nq.gz
+│   ├── 06ba0ebbf96d950416df8cc05a5d5130a4d00f80.nq.gz
+│   ├── 091cd4c7b75ef877cbd7cee716fe883b5177b4c9.nq.gz
+│   ├── 0a6686110b25ea6a5726f621ce423d37e91461c0.nq.gz
+│   ├── 0ace70a85e36a1c8c460f5733e3a75869d7c170a.nq.gz
+│   ├── 0bcfca24789e5dd5c2608cbb8024f06fcd926763.nq.gz
+│   ├── 0c0d4d6f59bec2b5d0d9aa75d015f15a64d2919d.nq.gz
+│   ├── 0e983507f595bf738a7828e96c128371f319ebb9.nq.gz
+│   ├── 13749ef2b1e93f1f4994059533c0de35e62df96a.nq.gz
+│   ├── 14fb02c112ffcbe9354d107fadf07e2c67c840f8.nq.gz
+│   ├── 1a5074791ebde56441f9a99f3582755f12362d96.nq.gz
+│   ├── 1b6a77b9f353b72669c77637a3ce2a39aff80562.nq.gz
+│   ├── 1c3ecae2583d995179bf9a97cb7f671bafcd1b19.nq.gz
+│   ├── 1c90bf98d0276c46e056610a65509ed02bbf8b34.nq.gz
+│   ├── 1e3fb0b7b4bcc6b009edd22f0bb34026b799cd1f.nq.gz
+│   ├── 1ead8ba69729fd498731af0c641747bd8b028d74.nq.gz
+│   ├── 1f94e667f832ed5d17a580b3677d343371098218.nq.gz
+│   ├── 2110a17524a49b0ab2405811158c1001edfb08c2.nq.gz
+│   ├── 215bf9b99f09c6de6060d77aff08b81c0c55b71f.nq.gz
+│   ├── 23c7bb1350ea1da9536f0549c7a0ce0f70ced46f.nq.gz
+│   ├── 24fe24ee656cbe794747a4dd5307df3e8ffcbf0c.nq.gz
+│   ├── 26a1467bbd4d525eb68fcb99deba754c0f5812c8.nq.gz
+│   ├── 27481d4c1d4dda74341de42b9bb3834674c1951a.nq.gz
+│   ├── 285225a50d126cfa3d3020f4db37237d6ab95036.nq.gz
+│   ├── 291e11cc76e1ede202f77c1ec0f4b5dc7e4c6bc5.nq.gz
+│   ├── 2a416083dcc0f62b0b77409db3323181055c5d1b.nq.gz
+│   ├── 2aef7ecb0ff9b6534bf792abe2cfaab524347620.nq.gz
+│   ├── 2bc6865cac2be4c3f96aa79bfc458eb289c27d08.nq.gz
+│   ├── 2d97a0774c8e11f9342099571e76b4fc7b3774ef.nq.gz
+│   ├── 2ec5633ddef38d91fd683b6447588db182ca58fc.nq.gz
+│   ├── 333756f8fe445ac5acd6aa9bf87855a48217261e.nq.gz
+│   ├── 3930d10d197e5a55b741920784bdb132e14373a1.nq.gz
+│   ├── 3c017b967821f3f16645e1ff431370cf2cf99d48.nq.gz
+│   ├── 3d42ec0da78c79873fd4d85980d2839679d9243f.nq.gz
+│   ├── 3e3d5276b6b93cea25e46a766a418c5f14dcd6a6.nq.gz
+│   ├── 3e73f966e8607e59a3dd77fd263291d23402d37e.nq.gz
+│   ├── 419135bc7aa87e926039f6b63632e5d310b1b032.nq.gz
+│   ├── 424dff4b070261edc60ace025f9f47f89b0d192f.nq.gz
+│   ├── 4461455f2a852952c773cac749b22b4b6a2cbc40.nq.gz
+│   ├── 467d911f2df3cdb8a931a47507f2048c71f978b1.nq.gz
+│   ├── 48f4d1a9c62803296afab2c4bd5ad12ef40527a3.nq.gz
+│   ├── 4d4c59ec38c848e2b5bdfb58000e237a82ead596.nq.gz
+│   ├── 525cfb971e35638fa225e9d3dc119851d10bd8fa.nq.gz
+│   ├── 541454875d835b1fa5647276deecfcd2bb9e22cd.nq.gz
+│   ├── 548d2ac1b42642df010384414ab9fddd3459ac01.nq.gz
+│   ├── 552737ca3f3c6f776724e2fdc76520a67845e3fe.nq.gz
+│   ├── 55b0851a47379027c597d93fe08958b8008dfde2.nq.gz
+│   ├── 5603231c3b808cb454cba19331ef8243f15bc460.nq.gz
+│   ├── 588023dbb35c89a2d2166782f74ce5cd143930ae.nq.gz
+│   ├── 5b4724363a9e58f05310e02bd8685b18fb654b4e.nq.gz
+│   ├── 5bf4654c5c1c6fb5ee922d0d580a98b0384eecdc.nq.gz
+│   ├── 5e85dd45bb0d25e1d6d5dad2121baa8bebaa40e4.nq.gz
+│   ├── 63d571eb0e55759f5283cef1c116a1506e716159.nq.gz
+│   ├── 63ea1a9d1e6e0f438352346e9f207d90e22bada0.nq.gz
+│   ├── 6436647833edc1bfe1077c277b755cbdb3435ccb.nq.gz
+│   ├── 651f45408584e42722b3711032626f656b6a211b.nq.gz
+│   ├── 6d7103526dd9cbd9ba77e98a29076cce841d0c95.nq.gz
+│   ├── 6e6737cbf8576bf9a5f1eb36eb58031bf9425d33.nq.gz
+│   ├── 6ffe90322bd07314a0885070411217a149d7f10c.nq.gz
+│   ├── 733e6971ed3f225d2141102cfa3bf1f191f1023b.nq.gz
+│   ├── 73f0f7fd3a2d96a222255a8edd06861b622360c2.nq.gz
+│   ├── 78e5f4381ac8db49fcf9b7e56a27eaba9a88fb8a.nq.gz
+│   ├── 7a18d5fb7352cef357421cd9137270f5bd7cb3e2.nq.gz
+│   ├── 7d4f96c54aa155a17387e64501c50b6a0469932c.nq.gz
+│   ├── 840b62d5e1015f58403c77318298649d5020a6dd.nq.gz
+│   ├── 85769d66191ba8963062dff55856480782ca0907.nq.gz
+│   ├── 880ecd40e8a3b652ca48081f595f51b319831848.nq.gz
+│   ├── 8b429e570758a87936a29c4b848ad12b789e556b.nq.gz
+│   ├── 8d9ced288c621b93fb3e52a27e16c207a044335f.nq.gz
+│   ├── 9145edfb364a4b4b4d85c3c9102697c897d8fff6.nq.gz
+│   ├── 923d955ba09494fd53d015618b0443846cd11413.nq.gz
+│   ├── 938870c28fbe929f48dc14d33cfc11230db34e55.nq.gz
+│   ├── 94a0cb13cb5c01c914c7aaba9bf7df8c7900610c.nq.gz
+│   ├── 975110378c221c802b705aee26cd5e5d250a983c.nq.gz
+│   ├── 9862186ecb8b3525f3cae13b30d80ccec0592e0c.nq.gz
+│   ├── 9920f87f8db4bbbcf84b0e89cfb322bfb1f5f90b.nq.gz
+│   ├── 9959be19c3dd39cf58e1e7a7db86139f330743b2.nq.gz
+│   ├── 999a3800f54473766196130de069732ded385498.nq.gz
+│   ├── 99b76a47b6340c3fff209f2f8504dffb71eb42bc.nq.gz
+│   ├── 9ace4401908a8eb28c28131b1113500e0ad8d3bc.nq.gz
+│   ├── 9ae4e245ef1cdc11ed0a62d4cd2e5b5df6353dfb.nq.gz
+│   ├── 9b5a1793b946f10c540d708efa21d6ae34d48f7a.nq.gz
+│   ├── 9b8f0176b25fa86afecdd6be34df8de88945d5ae.nq.gz
+│   ├── 9cdda7a63c9e47bc09714c322d78add164018945.nq.gz
+│   ├── 9d339b1a2c4e1210f3cd9497749c859ded96f5db.nq.gz
+│   ├── 9ec78225bdd0d7c35dd1f643d2af4a46bdcc1782.nq.gz
+│   ├── 9f2d59245598cc7be7743ef739a2a92518af0c01.nq.gz
+│   ├── a1412e6ede6c37ccb13bb185e57412f0e12f1fae.nq.gz
+│   ├── a249c3c8565a027a0f1b5771b62ef5dda0df23f3.nq.gz
+│   ├── a35a64232c2db198e3c7880a748f0528a72fb8c7.nq.gz
+│   ├── a606d8e1646e4e9e351ed3268d00e2e8b7edf1c4.nq.gz
+│   ├── a74f9e8c5a5715e054f00d8109175644ba3e18de.nq.gz
+│   ├── a87dd5b588e964c007db7bb89d666f2dd394df4e.nq.gz
+│   ├── aa561b64c8f42d27356ba40d7654b74ec52c3ffb.nq.gz
+│   ├── aec7f7f8aba415007e3b4a7990381606a8c1548b.nq.gz
+│   ├── b0320500af2f1bf6883c54d78ff40c2a1062fd53.nq.gz
+│   ├── b131a36c0816be169a8a607124dc5da7807d7e1c.nq.gz
+│   ├── b36201bec1690c1d76c32423f840b61d216f5051.nq.gz
+│   ├── b61477d7b5825f83f38a8654b8b3964ce6763f22.nq.gz
+│   ├── b728dacd0a08a96bc2acb0ce1fe9e4f2d5f2a0fa.nq.gz
+│   ├── b789cba975a20ed8d1112cd555472f3b77212648.nq.gz
+│   ├── bbda9eaf0a708f0c3378e8daaf2f206cbc2cec2b.nq.gz
+│   ├── bd722500b19822ef5faa685e8dc6fa1bf09ffa57.nq.gz
+│   ├── bf079b570585eb8d6657802b029b5cddbe098641.nq.gz
+│   ├── c161ea40110ae885105f7e57c989f969fe3a22a5.nq.gz
+│   ├── c3cacc1b06d5ff0750de0efb22897ec2ebacd51d.nq.gz
+│   ├── c8a38531b3748a22c5d480488457f8ee1215700b.nq.gz
+│   ├── ca140e4845b189818cb0b8ffbeb18f42761bd6e9.nq.gz
+│   ├── cb12af9b7329dc9390758304d1df4e1d395087bd.nq.gz
+│   ├── cb4aeecfcbf635ca96afa5f22f4079044b85f846.nq.gz
+│   ├── cb5d21ccc47d53ad378409b72c926ef37ff076eb.nq.gz
+│   ├── ce067ea8da54b873fce83a616223d24f8755df34.nq.gz
+│   ├── d02226b7c97b902aa4914a35314e8a1e6ccc0f8a.nq.gz
+│   ├── d09cd58327aedbb17d58de3b24eb660163946aac.nq.gz
+│   ├── d0b014aefa869c5378dc8b1cbed272b7f7ff8345.nq.gz
+│   ├── d1b4082593d06cf5becc9b485f1d580b59fb1416.nq.gz
+│   ├── d869077380a435d7a2918744916ba4ba9c5f53f7.nq.gz
+│   ├── d91cf445b4a540fad099c19683eac5740d557919.nq.gz
+│   ├── da211f1a8d373803d6525baa641e8231dfaedae1.nq.gz
+│   ├── db1b598ae753aa0fe8284232380cd9c3642ac0db.nq.gz
+│   ├── defa0a79ce21bea3ecb6e4573c22adc91194cb44.nq.gz
+│   ├── dfd11223fe623af7eb3963f8f937cce14700fd07.nq.gz
+│   ├── e1ab1dc6c7b1a7e6d3b2d26cb46d6fc6f0edd4c1.nq.gz
+│   ├── e3ccfc1b626ab6015672313e584116517435f10d.nq.gz
+│   ├── e45b1d872853cd2f34309664c38d309b5673e145.nq.gz
+│   ├── e5001f82429ca041bde863736ef76daaf1ef43b7.nq.gz
+│   ├── e79f5d0c11d718f39d127a1d7530a6459d519534.nq.gz
+│   ├── e98654f39c4dd1603d4d3cf0dac04c58d95a018f.nq.gz
+│   ├── eb0f8bccbdf82955f5abb6ceb8f52aa7a8534512.nq.gz
+│   ├── eb6eceb9af57eb7aeb48534f720112f7dd23e4b2.nq.gz
+│   ├── ebf5e104fdf18af09c1897332ec716f90114679c.nq.gz
+│   ├── ee722334bb9f81130ed00d9fe51d6880c4e548e4.nq.gz
+│   ├── f1e557a35a6b019010680d92a5df61679e47b1db.nq.gz
+│   ├── f4fbb3d909940b48aee6b85a4b0f7a346a08394d.nq.gz
+│   ├── f66b693f0047a1fc6e9e28995d924ff658d9b5a1.nq.gz
+│   ├── f89e9ff9d299e9a3bd8ecdfaf8884731a9bc6c4a.nq.gz
+│   ├── f902adfcba1e62e8120dbf4079e53dcdbf34bcf2.nq.gz
+│   ├── f96f7788b9fd02044a9b89bb07b24c8c88342201.nq.gz
+│   ├── f9767a88cbef0dd93db3031ca7f9c55d46d0fd31.nq.gz
+│   └── fe8d427af371929755c5f49c6f5ce13fed28338f.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── cb4337efcac0694231d3bd0976522887343ebab9.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+13 directories, 151 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[ansible-community/ansible-docsite](https://github.com/ansible-community/ansible-docsite)
+
+---
+*Parsed on 2026-11-06 by [repolex](https://repolex.ai)*
